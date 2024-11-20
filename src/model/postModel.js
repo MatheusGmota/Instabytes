@@ -1,0 +1,10 @@
+import conectarAoBanco from "../config/dbConfig.js"
+
+const conexao = await conectarAoBanco(process.env.STRING_CONEXAO)
+
+export async function obterTodosPosts() {
+    const db = conexao.db("instabytes")
+
+    const colecao = db.collection("posts")
+    return colecao.find().toArray()
+}
