@@ -24,7 +24,7 @@ export async function uploadPost(req, res) {
         alt: ""
     };
     try {
-        const postCriado = await uploadImagem(novoPost)        
+        const postCriado = await criarPost(novoPost)        
         const imagemAtualizada = `uploads/${postCriado.insertedId}.png`
         fs.renameSync(req.file.path, imagemAtualizada);
         res.status(200).json(postCriado);

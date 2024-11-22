@@ -15,10 +15,3 @@ export async function criarPost(post) {
 
     return colecao.insertOne(post)
 }
-
-export async function uploadImagem(post) {
-    const db = conexao.db("instabytes")
-    const colecao = db.collection("posts")
-
-    return colecao.insertOne(post)
-}
