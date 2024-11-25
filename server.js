@@ -6,5 +6,5 @@ app.use(express.static("uploads"))
 routes(app)
 
 app.listen(3000, () => {
-    console.log("Servidor escutando", "\nRodando servido em: http://localhost:3000/");  
+    console.log("Servidor escutando...");  
 });
